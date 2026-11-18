@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sayangkuu!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="lagu/SOMH.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" class="music-button" onclick="toggleMusic()">
+    🎵 Musik
+  </button>
+
+  <!-- HALAMAN 1 -->
+  <section class="page active" id="page1">
+    <div class="content">
+      <p class="small-text">A little surprise for you 💜</p>
+      <h1>Something Special<br>For You!</h1>
+      <p>Ada sesuatu yang sudah disiapkan untukmu...</p>
+      <button onclick="showPage(2)">Mulai ✨</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 2 -->
+  <section class="page" id="page2">
+    <div class="content">
+      <h1>Masukkan PIN 💌</h1>
+      <p>Masukkan tanggal spesial untuk membuka kejutan ini.</p>
+      <p>Hayoo inget nggaaa.</p>
+
+      <div class="pin-display" id="pinDisplay">______</div>
+      <p class="error" id="errorMessage"></p>
+
+      <div class="keypad">
+        <button onclick="addPin('1')">1</button>
+        <button onclick="addPin('2')">2</button>
+        <button onclick="addPin('3')">3</button>
+        <button onclick="addPin('4')">4</button>
+        <button onclick="addPin('5')">5</button>
+        <button onclick="addPin('6')">6</button>
+        <button onclick="addPin('7')">7</button>
+        <button onclick="addPin('8')">8</button>
+        <button onclick="addPin('9')">9</button>
+        <button onclick="clearPin()">⌫</button>
+        <button onclick="addPin('0')">0</button>
+        <button onclick="checkPin()">✓</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALAMAN 3 -->
+  <section class="page" id="page3">
+    <div class="content gift-content">
+      <h1>Ada Hadiah Untukmu! 🎁</h1>
+      <p class="gift-instruction" id="giftInstruction">
+        Ada hadiah kecil untuk kamu. Coba buka, ya!
+      </p>
+
+      <div class="gift-area">
+        <div class="gift-box" id="giftBox">
+          <div class="gift-lid"></div>
+          <div class="gift-body">
+            <div class="gift-ribbon"></div>
+          </div>
+        </div>
+      </div>
+
+      <button id="openGiftButton" onclick="openGift()">
+        Buka Hadiah 🎁
+      </button>
+
+      <div class="gift-message" id="giftMessage">
+        <h2>Surprise! 🎉</h2>
+        <p>Semoga hari spesialmu dipenuhi kebahagiaan! 💜</p>
+        <button onclick="showPage(4)">Lihat Kejutan Berikutnya 💕</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALAMAN 4 -->
+  <section class="page" id="page4">
+    <div class="content">
+      <h1>Our Little Memories 📸</h1>
+      <p>Beberapa kenangan yang aku simpan.</p>
+
+      <div class="gallery">
+    <img src="images/foto1.jpeg" alt="Foto kenangan 1">
+    <img src="images/foto2.jpeg" alt="Foto kenangan 2">
+    <img src="images/foto3.jpeg" alt="Foto kenangan 3">
+    <img src="images/foto4.jpeg" alt="Foto kenangan 4">
+     </div>
+
+      <button onclick="showPage(5)">Lanjut 💌</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 5 -->
+  <section class="page" id="page5">
+    <div class="content letter">
+       <h1>Happy Birthday cintakuu!! 🥳🤍</h1>
+
+    <p>
+      Selamat bertambah usia yaa! Semoga di umur yang sekarang,
+      banyak hal baik yang datang ke hidup kamu. Semoga semua hal
+      yang selama ini kamu semogakan bisa segera terwujud, semua
+      urusan dipermudah, dan apa pun yang sedang kamu perjuangkan
+      bisa mendapatkan hasil terbaik. I wish you nothing but
+      happiness and good things in life.
+    </p>
+
+    <p>
+      Semoga kamu selalu diberikan kesehatan, kebahagiaan, dan
+      dikelilingi orang-orang yang tulus menyayangi kamu. Semoga
+      ke depannya kamu lebih sering menemukan alasan untuk
+      tersenyum daripada bersedih. Kalau nanti ada hari-hari yang
+      terasa berat, semoga kamu selalu punya kekuatan untuk
+      melewatinya. Remember, it's okay to not be okay sometimes.
+      Nggak harus selalu kuat, nggak harus selalu terlihat baik-baik
+      saja, dan nggak harus memaksakan diri untuk menyelesaikan
+      semuanya dalam satu waktu.
+    </p>
+
+    <p>
+      Di umur yang baru ini, semoga kamu bisa semakin mengenal
+      diri sendiri, semakin sayang sama diri sendiri, dan semakin
+      percaya kalau kamu pantas mendapatkan banyak hal baik.
+      Jangan terlalu keras sama diri sendiri, ya. Setiap orang
+      punya waktunya masing-masing, jadi jangan pernah merasa
+      tertinggal hanya karena perjalanan kamu berbeda dari orang
+      lain. Take your time, enjoy every little moment, and trust
+      your own journey.
+    </p>
+
+    <p>
+      Aku juga berharap semoga semua impian dan keinginan kamu
+      satu per satu bisa tercapai. Semoga langkah kamu selalu
+      dimudahkan, rezekinya dilancarkan, dan selalu ada jalan
+      keluar untuk setiap kesulitan yang kamu hadapi. Semoga
+      tahun ini membawa banyak cerita indah, pengalaman baru,
+      orang-orang baik, dan kenangan yang nantinya bisa kamu
+      ingat dengan senyuman.
+    </p>
+
+    <p>
+      Pokoknya, jangan lupa bahagia dan jangan lupa bersyukur
+      atas hal-hal kecil yang kamu punya. Terima kasih sudah
+      bertahan dan sampai di titik ini. I'm so proud of you for
+      making it this far. Semoga versi diri kamu di masa depan
+      bisa menjadi seseorang yang lebih bahagia, lebih kuat,
+      dan tentunya lebih baik dari sebelumnya.
+    </p>
+
+    <p>
+      Once again, happy birthday! Semoga hari ini menjadi awal
+      dari banyak kebahagiaan yang akan datang. Enjoy your
+      special day, jangan lupa senyum yang banyak, dan semoga
+      semua doa baik kembali ke kamu berkali-kali lipat.
+      You deserve all the good things in this world.
+      Sending you lots of love! 🤍🫶🏻
+    </p>
+
+
+      <button onclick="showPage(6)">Pesan Terakhir ✨</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 6 -->
+  <section class="page" id="page6">
+    <div class="content">
+      <h1>Once Again, Happy Birthday! 🎉</h1>
+      <p>Semoga hari ini menjadi salah satu hari terbaikmu.</p>
+      <p>Terima kasih sudah menjadi seseorang yang spesial di hidup aku. 💗</p>
+      <button onclick="restartWebsite()">Ulangi dari Awal ↻</button>
+    </div>
+  </section>
+
+  <!-- EFEK BALON DAN BUNGA: DI LUAR SEMUA HALAMAN -->
+  <div class="celebration" id="celebration"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
